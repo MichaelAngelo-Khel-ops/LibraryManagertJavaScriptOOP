@@ -9,6 +9,7 @@
 // When a button is clicked, display the summary of the selected book in a div
 
 //test commit
+// test commit number 2
 class Book {
   //private variables
   #title;
