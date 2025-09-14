@@ -1,47 +1,3 @@
-// 1. Create a Book class
-
-// Properties: title, author, year
-
-// Method: getSummary() → returns a string like "Title by Author, Year"
-
-// target id
-
-// class Book {
-//   #title;
-//   #author;
-//   #year;
-
-//   constructor(title, author, year) {
-//     this.#title = title;
-//     this.#author = author;
-//     this.#year = year;
-//   }
-
-//   getTitle() {
-//     return this.#title;
-//   }
-//   getAuthor() {
-//     return this.#author;
-//   }
-//   getYear() {
-//     return this.#year;
-//   }
-
-//   getSummary() {
-//     console.log(`${this.#title} by ${this.#author} ${this.#year}`);
-//   }
-// }
-
-// let button = document.querySelector("#exicution");
-
-// // create event for button to exicute;
-
-// const b1 = new Book("ang pangarap kong libreo", "mike", 2025);
-
-// b1.getSummary();
-
-// button.addEventListener("click", () => b1.getSummary());
-
 // Create a Book class (private fields: title, author, year)
 
 // Create a subclass Ebook that extends Book (add fileSize field)
@@ -52,6 +8,7 @@
 
 // When a button is clicked, display the summary of the selected book in a div
 
+//test commit
 class Book {
   //private variables
   #title;
