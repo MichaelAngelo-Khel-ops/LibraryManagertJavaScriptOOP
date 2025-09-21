@@ -18,7 +18,8 @@
 // add new comment on this branch
 
 // const ebook = new Ebook("Rascals", "Mike", 2025, 500);
-// add buttons
+// add button
+
 const bookshelf = [];
 
 const books = {
@@ -64,3 +65,8 @@ for (let x = 0; x < books.count; x++) {
   // display buttons
   parent.appendChild(buttonElement);
 }
+
+// display loginc
+
+//create book function
+function createBook() {}
