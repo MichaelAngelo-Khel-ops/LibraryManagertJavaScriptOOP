@@ -5,5 +5,20 @@
   justify-content: center;
 }
 
-.buttonContainer {
+#addBooks {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#inputContainerBooks,
+#inputContainerEBooks {
+  display: flex;
+  flex-direction: column;
+}
+#inputContainerBooks h2,
+#inputContainerEBooks h2 {
+  text-align: center;
 }
