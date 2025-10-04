@@ -74,23 +74,32 @@ for (let x = 0; x < books.count; x++) {
 
 select("#submitBook").addEventListener("click", () => {
   // add validation
+  let validation = true;
 
-  // add book value to a new storage
-  const input = [
-    select(".newBookTitle").value,
-    select(".newBookAuthor").value,
-    select(".newBookYear").value,
-  ];
+  //testing each input field
 
-  bookshelf[bookshelf.length] = new Book(
-    input[0],
-    input[1],
-    parseInt(input[2])
-  );
-  console.log("adding " + input[1] + " done");
+  if (select(".newBookTitle").value === "") validation = false;
+  if (select(".newBookAuthor").value === "") validation = false;
+  if (select(".newBookYear").value === "") validation = false;
 
-  // clear all input fields
-  input[0] = "";
-  input[1] = "";
-  input[2] = "";
+  if (validation) {
+    // add book value to a new storage
+    const input = [
+      select(".newBookTitle").value,
+      select(".newBookAuthor").value,
+      select(".newBookYear").value,
+    ];
+
+    bookshelf[bookshelf.length] = new Book(
+      input[0],
+      input[1],
+      parseInt(input[2])
+    );
+    console.log("adding " + input[1] + " done");
+
+    // clear all input fields
+    select(".newBookTitle").value = "";
+    select(".newBookAuthor").value = "";
+    select(".newBookYear").value = "";
+  }
 });
