@@ -18,6 +18,10 @@
   display: flex;
   flex-direction: column;
 }
+#inputContainerEBooks {
+  display: none;
+}
+
 #inputContainerBooks h2,
 #inputContainerEBooks h2 {
   text-align: center;

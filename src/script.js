@@ -30,6 +30,8 @@ const books = {
   count: 5,
 };
 
+// create book on input;
+
 const divOutput = select("#buttonContainerr");
 
 //parent DOM obj
@@ -68,5 +70,27 @@ for (let x = 0; x < books.count; x++) {
 
 // display loginc
 
-//create book function
-function createBook() {}
+//create book function and place this code on the add book button
+
+select("#submitBook").addEventListener("click", () => {
+  // add validation
+
+  // add book value to a new storage
+  const input = [
+    select(".newBookTitle").value,
+    select(".newBookAuthor").value,
+    select(".newBookYear").value,
+  ];
+
+  bookshelf[bookshelf.length] = new Book(
+    input[0],
+    input[1],
+    parseInt(input[2])
+  );
+  console.log("adding " + input[1] + " done");
+
+  // clear all input fields
+  input[0] = "";
+  input[1] = "";
+  input[2] = "";
+});

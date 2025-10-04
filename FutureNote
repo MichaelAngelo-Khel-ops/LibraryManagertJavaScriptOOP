@@ -1,3 +1,6 @@
 add a function where "add Books here!" can be toggled based on the user like there will be a button that will toggle if use wanna add normal book or an ebook. CSS functionality
 
 add a design on index file
+
+created a animation.js for CSS animations add a toggle function in the checkbox item. where ill hide the content of add book depending on the check box if its status is tru or false
+

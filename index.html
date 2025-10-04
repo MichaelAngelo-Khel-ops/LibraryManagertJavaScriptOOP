@@ -8,19 +8,32 @@
   <body>
     <div id="addBooks">
       <h1>Add books here!</h1>
+      <input type="checkbox" name="Switch" id="toggle" />
       <div id="inputContainerBooks">
         <h2>Books</h2>
-        <input type="text" placeholder="Add Book Title" class="newBookT" />
-        <input type="text" placeholder="Add Book Author" class="newBook" />
-        <input type="text" placeholder="Add Book Year" class="newBook" />
+        <input type="text" placeholder="Add Book Title" class="newBookTitle" />
+        <input
+          type="text"
+          placeholder="Add Book Author"
+          class="newBookAuthor"
+        />
+        <input type="text" placeholder="Add Book Year" class="newBookYear" />
         <button id="submitBook">Add Book</button>
       </div>
       <div id="inputContainerEBooks">
         <h2>E-Books</h2>
-        <input type="text" placeholder="Add Book Title" class="newBookT" />
-        <input type="text" placeholder="Add Book Author" class="newBook" />
-        <input type="text" placeholder="Add Book Year" class="newBook" />
-        <input type="text" placeholder="Add Book File Size" class="newBook" />
+        <input type="text" placeholder="Add Book Title" class="newEBookTitle" />
+        <input
+          type="text"
+          placeholder="Add Book Author"
+          class="newEBookAuthor"
+        />
+        <input type="text" placeholder="Add Book Year" class="newEBookYear" />
+        <input
+          type="text"
+          placeholder="Add Book File Size"
+          class="newEBookSize"
+        />
         <button id="submitEBook">Add E-Book</button>
       </div>
     </div>
@@ -37,5 +50,6 @@
 
   <script src="src/book.js"></script>
   <script src="src/script.js"></script>
+  <script src="src/animation.js"></script>
   <link rel="stylesheet" href="/src/style.css" />
 </html>

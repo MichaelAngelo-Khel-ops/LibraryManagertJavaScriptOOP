@@ -44,7 +44,7 @@ class Ebook extends Book {
   }
 
   displayBook(list) {
-    document.getElementById(
+    document.select(
       list
     ).textContent = `${super.getTitle()} by ${super.getAuthor()} : ${super.getYear()} ${
       this.#fileSize
@@ -52,6 +52,7 @@ class Ebook extends Book {
   }
 }
 
+// utilities
 // id selector
 function select(id) {
   return document.querySelector(id);
