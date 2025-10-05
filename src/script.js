@@ -23,8 +23,14 @@
 const bookshelf = [];
 
 const Ebooks = {
-  author: ["mike", "diane", "pepe", "king", "jorme"],
-  title: ["book of revalation", "bojack", "pupu ni pepe", "kong", "senfhashm"],
+  author: ["mike", "diane", "jose", "king", "jake"],
+  title: [
+    "book of rhymes",
+    "why go to vietnam",
+    "el filibusterismo",
+    "kong",
+    "the dog",
+  ],
   year: [2025, 2017, 2022, 2009, 2000],
   size: [100, "500kb", 56, "37kb", 325],
   count: 5,
