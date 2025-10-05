@@ -25,8 +25,10 @@ class Book {
     return this.#year;
   }
 
-  displayBook() {
-    return `${this.#title} by ${this.#author} : ${this.#year}`;
+  displayBook(list) {
+    select(
+      list
+    ).textContent = `${this.getTitle()} by ${this.getAuthor()} : ${this.getYear()}`;
   }
 }
 
@@ -44,11 +46,11 @@ class Ebook extends Book {
   }
 
   displayBook(list) {
-    document.select(
+    select(
       list
     ).textContent = `${super.getTitle()} by ${super.getAuthor()} : ${super.getYear()} ${
       this.#fileSize
-    }kb`;
+    } kb`;
   }
 }
 

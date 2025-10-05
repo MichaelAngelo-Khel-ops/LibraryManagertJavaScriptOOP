@@ -22,7 +22,7 @@
 
 const bookshelf = [];
 
-const books = {
+const Ebooks = {
   author: ["mike", "diane", "pepe", "king", "jorme"],
   title: ["book of revalation", "bojack", "pupu ni pepe", "kong", "senfhashm"],
   year: [2025, 2017, 2022, 2009, 2000],
@@ -42,16 +42,17 @@ const parentUL = select("#outputContainer");
 //create child
 
 //create object instances
-for (let x = 0; x < books.count; x++) {
+
+for (let x = 0; x < Ebooks.count; x++) {
   bookshelf[x] = new Ebook(
-    books.title[x],
-    books.author[x],
-    books.year[x],
-    books.size[x]
+    Ebooks.title[x],
+    Ebooks.author[x],
+    Ebooks.year[x],
+    Ebooks.size[x]
   );
   //create button and set text
   let buttonElement = document.createElement("button");
-  buttonElement.textContent = "book" + books.title[x];
+  buttonElement.textContent = "book " + Ebooks.title[x];
 
   //add functions to buttons
 
@@ -61,7 +62,7 @@ for (let x = 0; x < books.count; x++) {
   parentUL.appendChild(listElement);
 
   buttonElement.addEventListener("click", () => {
-    bookshelf[x].displayBook("list" + x);
+    bookshelf[x].displayBook("#list" + x);
   });
 
   // display buttons
@@ -71,7 +72,6 @@ for (let x = 0; x < books.count; x++) {
 // display loginc
 
 //create book function and place this code on the add book button
-
 select("#submitBook").addEventListener("click", () => {
   // add validation
   let validation = true;
@@ -95,11 +95,76 @@ select("#submitBook").addEventListener("click", () => {
       input[1],
       parseInt(input[2])
     );
-    console.log("adding " + input[1] + " done");
+    console.log("adding Book: " + input[1] + " done!");
 
     // clear all input fields
     select(".newBookTitle").value = "";
     select(".newBookAuthor").value = "";
     select(".newBookYear").value = "";
+    updateBookShelf();
   }
 });
+
+//create book function and place this code on the add book button
+select("#submitEBook").addEventListener("click", () => {
+  // add validation
+  let validation = true;
+
+  //testing each input field
+
+  if (select(".newEBookTitle").value === "") validation = false;
+  if (select(".newEBookAuthor").value === "") validation = false;
+  if (select(".newEBookYear").value === "") validation = false;
+  if (select(".newEBookSize").value === "") validation = false;
+
+  if (validation) {
+    // add book value to a new storage
+    const input = [
+      select(".newEBookTitle").value,
+      select(".newEBookAuthor").value,
+      select(".newEBookYear").value,
+      select(".newEBookSize").value,
+    ];
+
+    bookshelf[bookshelf.length] = new Ebook(
+      input[0],
+      input[1],
+      parseInt(input[2]),
+      input[3]
+    );
+    console.log("adding Ebook: " + input[1] + " done!");
+
+    // clear all input fields
+    select(".newEBookTitle").value = "";
+    select(".newEBookAuthor").value = "";
+    select(".newEBookYear").value = "";
+    select(".newEBookSize").value = "";
+    updateBookShelf();
+  }
+});
+
+// display book function once book was added on bookshelf
+function updateBookShelf() {
+  const container = select("#buttonContainer"); // select button/book container
+  const outputContainer = select("#outputContainer");
+  container.replaceChildren(); // removes all button
+  outputContainer.replaceChildren(); // removes all list in output container
+
+  for (let x = 0; x < bookshelf.length; x++) {
+    let newButton = document.createElement("button"); // create new button
+    newButton.textContent = bookshelf[x].getTitle(); // add title of the book
+
+    // create new list
+    let listElement = document.createElement("li");
+    listElement.id = "list" + x;
+    parentUL.appendChild(listElement);
+
+    //add eventlistener
+    newButton.addEventListener("click", () => {
+      bookshelf[x].displayBook("#list" + x);
+    });
+
+    // display all buttons
+    container.appendChild(newButton);
+  }
+}
