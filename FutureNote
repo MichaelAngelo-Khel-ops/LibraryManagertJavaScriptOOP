@@ -4,8 +4,10 @@ add a design on index file
 
 created a animation.js for CSS animations add a toggle function in the checkbox item. where ill hide the content of add book depending on the check box if its status is tru or false
 
-------
+---
 
 10/05/2025
 
-update visual seems off when creating -- focus next session do front end like the looks of the page pls
+update visual seems off when creating -- focus next session do front end like the looks of the page pls and adding a to edit book content like if the user incorrecly add the name - we can then update it manually on the app
+
+---
