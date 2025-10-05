@@ -52,7 +52,7 @@ for (let x = 0; x < Ebooks.count; x++) {
   );
   //create button and set text
   let buttonElement = document.createElement("button");
-  buttonElement.textContent = "book " + Ebooks.title[x];
+  buttonElement.textContent = Ebooks.title[x];
 
   //add functions to buttons
 

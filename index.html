@@ -6,45 +6,55 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="addBooks">
-      <h1>Add books here!</h1>
-      <input type="checkbox" name="Switch" id="toggle" />
-      <div id="inputContainerBooks">
-        <h2>Books</h2>
-        <input type="text" placeholder="Add Book Title" class="newBookTitle" />
-        <input
-          type="text"
-          placeholder="Add Book Author"
-          class="newBookAuthor"
-        />
-        <input type="text" placeholder="Add Book Year" class="newBookYear" />
-        <button id="submitBook">Add Book</button>
+    <div id="mainContainer">
+      <div id="addBooks">
+        <h1>Add Books here!</h1>
+        <input type="checkbox" name="Switch" id="toggle" />
+        <div id="inputContainerBooks">
+          <h2>Books</h2>
+          <input
+            type="text"
+            placeholder="Add Book Title"
+            class="newBookTitle"
+          />
+          <input
+            type="text"
+            placeholder="Add Book Author"
+            class="newBookAuthor"
+          />
+          <input type="text" placeholder="Add Book Year" class="newBookYear" />
+          <button id="submitBook">Add Book</button>
+        </div>
+        <div id="inputContainerEBooks">
+          <h2>E-Books</h2>
+          <input
+            type="text"
+            placeholder="Add Book Title"
+            class="newEBookTitle"
+          />
+          <input
+            type="text"
+            placeholder="Add Book Author"
+            class="newEBookAuthor"
+          />
+          <input type="text" placeholder="Add Book Year" class="newEBookYear" />
+          <input
+            type="text"
+            placeholder="Add Book File Size"
+            class="newEBookSize"
+          />
+          <button id="submitEBook">Add E-Book</button>
+        </div>
       </div>
-      <div id="inputContainerEBooks">
-        <h2>E-Books</h2>
-        <input type="text" placeholder="Add Book Title" class="newEBookTitle" />
-        <input
-          type="text"
-          placeholder="Add Book Author"
-          class="newEBookAuthor"
-        />
-        <input type="text" placeholder="Add Book Year" class="newEBookYear" />
-        <input
-          type="text"
-          placeholder="Add Book File Size"
-          class="newEBookSize"
-        />
-        <button id="submitEBook">Add E-Book</button>
-      </div>
-    </div>
 
-    <div class="buttonContainer">
-      <h1>Button books available</h1>
-      <div id="buttonContainer"></div>
-    </div>
-    <div id="divOutputContainer">
-      <h1>Output</h1>
-      <ol id="outputContainer"></ol>
+      <div class="buttonContainer">
+        <h1>Button books available</h1>
+        <div id="buttonContainer"></div>
+      </div>
+      <div id="divOutputContainer">
+        <h1>Output</h1>
+        <ol id="outputContainer"></ol>
+      </div>
     </div>
   </body>
 
